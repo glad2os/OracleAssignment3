@@ -8,7 +8,7 @@ based on a project ID. The procedure should have two parameters: one to accept a
 value and another to return all data for the specified project. Use a record variable to have the
 procedure return all database column values for the selected project. Test the procedure with an
 anonymous block.*
-```
+```sql
 CREATE OR REPLACE PROCEDURE DDPROJ_SP(
 projectID IN DD_PROJECT.IDPROJ%type,
 projectResponse out DD_PROJECT%ROWTYPE)
@@ -65,8 +65,7 @@ the status field and is on a monthly payment plan. If so, the procedure is to re
 value TRUE. Otherwise, the value FALSE should be returned. Test the procedure with an
 anonymous block.*
 
-CODE :
-```
+```sql
 CREATE OR REPLACE PROCEDURE DDPAY_SP(
 paymentID IN NUMBER,
 paymentResponse OUT boolean)
@@ -120,7 +119,7 @@ that doesn't have monthly payments associated with it*
 
 
 
-```
+```sql
 CREATE OR REPLACE PROCEDURE DDCKPAY_SP(DD_ID IN NUMBER,
                                        DD_AMT IN NUMBER,
                                        OUTPUT OUT VARCHAR2)
@@ -238,7 +237,7 @@ the following values:
 • Size code—2  
 • Form code—4 
 
-```
+```sql
 CREATE OR REPLACE PROCEDURE BASKET_ADD_SP(
     LV_IDBASKET BB_BASKETITEM.IDBASKET%TYPE,
     LV_IDPRODUCT BB_BASKETITEM.IDPRODUCT%TYPE,
